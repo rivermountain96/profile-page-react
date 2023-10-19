@@ -105,7 +105,7 @@ header nav {
   width: 1440px;
 }
 .About .container .About_info_1 {
-  background-image: url(/public/img/info_1.jpg);
+  background-image: url(../img/info_1.jpg);
   width: 340px;
   height: 432px;
   background-repeat: no-repeat;
@@ -152,13 +152,13 @@ header nav {
   text-align: center;
 }
 .container .myImg_info2 {
-  background-image: url(/public/img/info_2.jpg);
+  background-image: url(../img/info_2.jpg);
 }
 .container .myImg_info3 {
-  background-image: url(/public/img/info_3.jpg);
+  background-image: url(../img/info_3.jpg);
 }
 .container .myImg_info4 {
-  background-image: url(/public/img/info_4.jpg);
+  background-image: url(../img/info_4.jpg);
 }
 .container .myImg_info2,
 .container .myImg_info3,
@@ -214,14 +214,29 @@ header nav {
   padding-left: 20px;
 }
 
+/* 초기 상태 */
+.About_info_1,
+.myImg3 {
+  transform: translateX(50%);
+  opacity: 0;
+  transition: transform 2s ease, opacity 2s ease; /* 전환 효과 추가 */
+}
+
+/* 스크롤 위치에 따른 변경된 상태 */
+.About_info_1.is-scrolled,
+.myImg3.is-scrolled {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
 /* waypoint 플러그인 */
 
 /* animate-right 기존 요소 */
-.About_info_1,
-.myImg3 {
-  transform: translateX(100%);
-  opacity: 0;
-}
+// .About_info_1,
+// .myImg3 {
+//   transform: translateX(100%);
+//   opacity: 0;
+// }
 /* animate-left 기존 요소 */
 .About_info_2,
 .myImg1 {
