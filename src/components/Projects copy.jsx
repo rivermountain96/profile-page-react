@@ -9,7 +9,7 @@ import keepcoding_LMS_pj from "../assets/img/keepcoding_LMS_pj.svg";
 import keepcoding_pj from "../assets/img/keepcoding_pj.svg";
 
 // Swiper 모듈 import
-import SwiperCore, { Navigation, Pagination } from "swiper/core";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.min.css";
 
 // Swiper 모듈 초기화
@@ -38,17 +38,9 @@ const Projects = () => {
       <section className="Projects" id="projects">
         <div className="container">
           <h2 className="h2">Projects</h2>
-          <Swiper
-            className="swiper" // Swiper 컨테이너 클래스 지정
-            slidesPerView={1}
-            spaceBetween={10}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
-            pagination={{ clickable: true, el: ".swiper-pagination" }}>
-            <SwiperSlide>
-              <div className="swiper-slide">
+          <div className="swiper">
+            <ul className="swiper-wrapper">
+              <li className="swiper-slide">
                 <h3 className="project_name">Nexon</h3>
                 <div className="project_info">
                   <h4>넥슨 리뉴얼</h4>
@@ -66,10 +58,8 @@ const Projects = () => {
                   </div>
                 </div>
                 <img src={nexon_pj} alt="Nexon" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-slide">
+              </li>
+              <li className="swiper-slide">
                 <h3 className="project_name">Samsung Display</h3>
                 <div className="project_info">
                   <h4>삼성 디스플레이 리뉴얼</h4>
@@ -89,10 +79,8 @@ const Projects = () => {
                   </div>
                 </div>
                 <img src={samsung_pj} alt="Samsung_Display" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-slide">
+              </li>
+              <li className="swiper-slide">
                 <h3 className="project_name">Keepcoding</h3>
                 <div className="project_info">
                   <h4>LMS 학습사이트 관리자페이지</h4>
@@ -117,10 +105,8 @@ const Projects = () => {
                   </div>
                 </div>
                 <img src={keepcoding_LMS_pj} alt="keepcoding_admin_page" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-slide">
+              </li>
+              <li className="swiper-slide">
                 <h3 className="project_name">Keepcoding</h3>
                 <div className="project_info">
                   <h4>이러닝 사이트 유저페이지</h4>
@@ -145,9 +131,12 @@ const Projects = () => {
                   </div>
                 </div>
                 <img src={keepcoding_pj} alt="Keepcoding_user_page" />
-              </div>
-            </SwiperSlide>
-          </Swiper>
+              </li>
+            </ul>
+            <div className="swiper-pagination"></div>
+            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
+          </div>
         </div>
       </section>
     </>

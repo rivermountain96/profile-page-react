@@ -3,6 +3,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import "~bootstrap/scss/bootstrap";
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -97,8 +100,7 @@ header nav {
 
 /* Main.scss 시작 */
 .About {
-  padding-top: calc(var(--base-unit) * 9);
-  height: calc(var(--base-unit) * 27);
+  padding-top: calc(var(--base-unit) * 16);
 }
 .About .container {
   height: 100%;
@@ -127,6 +129,13 @@ header nav {
   font-weight: 600;
   line-height: 42px;
   padding: 36px 0;
+  h4 {
+    text-align: right;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+  }
 }
 .About .container .p_info {
   text-align: right;
@@ -134,17 +143,20 @@ header nav {
   font-style: normal;
   font-weight: 500;
   line-height: 28px; /* 140% */
+  p {
+    margin: 0;
+  }
 }
 .myadvantage {
-  padding: calc(var(--base-unit) * 8) 0;
+  padding: calc(var(--base-unit) * 6) 0;
 }
 .Adventage_myadvantage h3 {
   text-align: center;
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
-  line-height: 64px; /* 100% */
-  padding-bottom: calc(var(--base-unit) * 4);
+  line-height: 64px;
+  // padding-bottom: calc(var(--base-unit) * 4);
 }
 .myImg .myImg1,
 .myImg .myImg2,
@@ -192,13 +204,15 @@ header nav {
   align-items: center;
 }
 .container .history_title {
-  text-align: right;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 80px;
   width: 50%;
   padding-right: 90px;
   box-sizing: border-box;
+  h3 {
+    text-align: right;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+  }
 }
 .container .history_content {
   text-align: left;
@@ -214,65 +228,47 @@ header nav {
   padding-left: 20px;
 }
 
-/* 초기 상태 */
 .About_info_1,
-.myImg3 {
+.myImg3,
+.history_content {
   transform: translateX(50%);
   opacity: 0;
-  transition: transform 2s ease, opacity 2s ease; /* 전환 효과 추가 */
+  transition: transform 2s ease, opacity 2s ease;
 }
 
-/* 스크롤 위치에 따른 변경된 상태 */
 .About_info_1.is-scrolled,
-.myImg3.is-scrolled {
+.myImg3.is-scrolled,
+.history_content.is-scrolled {
   transform: translateX(0%);
   opacity: 1;
 }
 
-/* waypoint 플러그인 */
-
-/* animate-right 기존 요소 */
-// .About_info_1,
-// .myImg3 {
-//   transform: translateX(100%);
-//   opacity: 0;
-// }
-/* animate-left 기존 요소 */
 .About_info_2,
 .myImg1 {
-  transform: translateX(-100%);
+  transform: translateX(-50%);
   opacity: 0;
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
-/* animate-up 기존 요소 */
+
+.About_info_2.is-scrolled,
+.myImg1.is-scrolled {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
 .myImg2,
 .myImg_h3,
-.table,
 .history_title {
-  transform: translateY(-100%);
+  transform: translateY(50%);
   opacity: 0;
-}
-/* animate 효과 후 */
-.About_info_1.animate-right,
-.myImg3.animate-right {
-  transform: translateX(0);
-  opacity: 1;
   transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
 
-.About_info_2.animate-left,
-.myImg1.animate-left {
-  transform: translateX(0);
+.myImg2.is-scrolled,
+.myImg_h3.is-scrolled,
+.history_title.is-scrolled {
+  transform: translateY(0%);
   opacity: 1;
-  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
-}
-
-.myImg2.animate-up,
-.myImg_h3.animate-up,
-.table.animate-up,
-.history_title.animate-up {
-  transform: translateY(0);
-  opacity: 1;
-  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
 
 /* skills 파트 시작 */
@@ -280,7 +276,7 @@ header nav {
   padding-top: calc(var(--base-unit) * 4) 0;
 }
 .Skills .h2 {
-  padding: calc(var(--base-unit) * 8) 0;
+  padding: calc(var(--base-unit) * 4) 0;
 }
 .skills_h3 {
   font-size: 18px;
@@ -559,18 +555,16 @@ header nav {
   }
   .About .container {
     width: 100%;
+    gap: 20px;
   }
   .About .container .About_info_1 {
     height: 340px;
-  }
-  #about .container {
-    gap: 20px;
   }
   .p_info p {
     font-size: 14px;
   }
   .myadvantage {
-    padding: calc(var(--base-unit) * 4) 0;
+    padding: calc(var(--base-unit) * 8) 0;
   }
   .Advantage h3 {
     font-size: 36px;
