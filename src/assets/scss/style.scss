@@ -303,7 +303,7 @@ header nav {
   padding: calc(var(--base-unit) * 10) 0;
 }
 .Projects .h2 {
-  padding-bottom: calc(var(--base-unit) * 10);
+  padding-bottom: calc(var(--base-unit) * 6);
 }
 .Projects .swiper {
   width: 80%;
@@ -346,7 +346,7 @@ header nav {
   z-index: -10;
 }
 .Projects .project_info {
-  opacity: 1; /*원래 0*/
+  opacity: 0; /*원래 0*/
   background-color: rgba(0, 0, 0, 0.95);
   color: #fff;
   position: absolute;
@@ -359,7 +359,6 @@ header nav {
 }
 .project_info h4,
 .project_info p {
-  padding: 13px;
   text-align: center;
 }
 .project_info h4 {
@@ -367,13 +366,9 @@ header nav {
   font-weight: bold;
   padding: 100px 0 40px 0;
 }
-.project_info p {
-  font-size: 18px;
-}
 .link {
   width: 500px;
-  height: 150px; /* 위치변동 가능 */
-  padding-top: 50px;
+  height: 150px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -464,12 +459,15 @@ header nav {
   align-items: flex-end;
 }
 .Contact h2 {
-  padding: 32px 0 56px 0;
+  padding: 40px 0 56px 0;
+  background: var(--navy);
+  color: #fff;
 }
 .Contact p {
   font-size: 18px;
   line-height: 32px;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .final_info {
@@ -477,14 +475,21 @@ header nav {
   display: flex;
   flex-direction: column;
   align-items: start;
-}
-.final_info p {
-  text-align: left;
-}
-.final_info img {
-  width: 48px;
-  height: 48px;
-  padding-bottom: 10px;
+  p {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  img {
+    height: 60px;
+    padding-bottom: 10px;
+  }
+  a {
+    color: var(--blue);
+    transform: 0.2s;
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 .git_img_container {
   position: relative;

@@ -1,52 +1,35 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
+
 import nexon_pj from "../assets/img/nexon_pj.svg";
 import samsung_pj from "../assets/img/samsung_pj.svg";
 import keepcoding_LMS_pj from "../assets/img/keepcoding_LMS_pj.svg";
 import keepcoding_pj from "../assets/img/keepcoding_pj.svg";
 
-// Swiper 모듈 import
-import SwiperCore, { Navigation, Pagination } from "swiper/core";
-import "swiper/swiper-bundle.min.css";
-
-// Swiper 모듈 초기화
-SwiperCore.use([Navigation, Pagination]);
-
 const Projects = () => {
-  useEffect(() => {
-    // Swiper 초기화
-    const mySwiper = new Swiper(".swiper", {
-      // Swiper 옵션 설정
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  }, []);
-
   return (
     <>
       <section className="Projects" id="projects">
         <div className="container">
           <h2 className="h2">Projects</h2>
           <Swiper
-            className="swiper" // Swiper 컨테이너 클래스 지정
+            className="swiper"
+            modules={[Navigation, Pagination, Autoplay]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+              pauseOnMouseLeave: true,
+            }}
             slidesPerView={1}
             spaceBetween={10}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
-            pagination={{ clickable: true, el: ".swiper-pagination" }}>
+            navigation
+            pagination={{ clickable: true }}
+            loop={true}>
             <SwiperSlide>
               <div className="swiper-slide">
                 <h3 className="project_name">Nexon</h3>
