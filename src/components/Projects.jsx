@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/scss";
@@ -40,12 +42,12 @@ const Projects = () => {
                   <p>스택 : HTML5, CSS3, JAVASCRIPT</p>
                   <p>구현 페이지 : 메인 홈페이지</p>
                   <div className="link">
-                    <a href="nexon.html">
+                    <Link to="/nexon">
                       read more
                       <span className="material-symbols-outlined">
                         arrow_right_alt
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <img src={nexon_pj} alt="Nexon" />
@@ -63,12 +65,12 @@ const Projects = () => {
                   </p>
                   <p>구현페이지 : 메인 홈페이지, COMPANY, TECHNOLOGY, ESG</p>
                   <div className="link">
-                    <a href="samsung.html">
+                    <Link to="/samsung">
                       read more
                       <span className="material-symbols-outlined">
                         arrow_right_alt
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <img src={samsung_pj} alt="Samsung_Display" />
@@ -91,12 +93,12 @@ const Projects = () => {
                     카테고리, 강좌관리, 쿠폰관리
                   </p>
                   <div className="link">
-                    <a href="keepcoding_admin.html">
+                    <Link to="/keepcoding_admin">
                       read more
                       <span className="material-symbols-outlined">
                         arrow_right_alt
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <img src={keepcoding_LMS_pj} alt="keepcoding_admin_page" />
@@ -119,12 +121,12 @@ const Projects = () => {
                     숏강의, 커뮤니티, 장바구니, 마이페이지
                   </p>
                   <div className="link">
-                    <a href="keepcoding_user.html">
+                    <Link to="/keepcoding_user">
                       read more
                       <span className="material-symbols-outlined">
                         arrow_right_alt
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <img src={keepcoding_pj} alt="Keepcoding_user_page" />
