@@ -98,6 +98,62 @@ header nav {
   }
 }
 
+/* Scroll 가이드 */
+#scrollguide {
+  margin-top: calc(var(--base-unit) * 8);
+  text-align: center;
+  padding-top: 60px;
+  #scroll_border {
+    position: absolute;
+    top: 18vh;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--blue);
+    border-radius: 100%;
+    box-sizing: border-box;
+    animation: scrollguideAnimation 2s infinite;
+  }
+  #scroll_border::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    width: 20px;
+    height: 20px;
+    margin: -12px 0 0 -8px;
+    border-left: 3px solid var(--blue);
+    border-bottom: 3px solid var(--blue);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+  #scroll_mention {
+    position: absolute;
+    top: 28vh;
+    width: 80px;
+    left: 50%;
+    font-size: 30px;
+    color: var(--blue);
+    animation: scrollguideAnimation 2s infinite;
+  }
+}
+@keyframes scrollguideAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Main.scss 시작 */
 .About {
   padding-top: calc(var(--base-unit) * 16);

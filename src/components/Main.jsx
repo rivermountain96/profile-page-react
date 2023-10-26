@@ -7,7 +7,7 @@ const Main = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
-      if (scrollTop >= 0) {
+      if (scrollTop > 0) {
         setIsScrolled(true);
       }
     };
@@ -21,9 +21,18 @@ const Main = () => {
     };
   }, [isScrolled]);
 
+  const scrollguideStyle = {
+    opacity: isScrolled ? 0 : 1,
+    transition: "opacity 0.5s ease-in-out",
+  };
+
   return (
     <>
       <section className="About" id="about">
+        <div id="scrollguide" style={scrollguideStyle}>
+          <span id="scroll_border"></span>
+          <span id="scroll_mention">Scroll</span>
+        </div>
         <div className="container d-flex justify-content-around">
           <div className={`About_info_1 ${isScrolled ? "is-scrolled" : ""}`}>
             profile_img1
