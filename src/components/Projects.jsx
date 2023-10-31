@@ -7,10 +7,10 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 
-import nexon_pj from "../assets/img/nexon_pj.svg";
-import samsung_pj from "../assets/img/samsung_pj.svg";
-import keepcoding_LMS_pj from "../assets/img/keepcoding_LMS_pj.svg";
-import keepcoding_pj from "../assets/img/keepcoding_pj.svg";
+// import nexon_pj from "../assets/img/nexon_pj.svg";
+// import samsung_pj from "../assets/img/samsung_pj.svg";
+// import keepcoding_LMS_pj from "../assets/img/keepcoding_LMS_pj.svg";
+// import keepcoding_pj from "../assets/img/keepcoding_pj.svg";
 
 const Projects = () => {
   return (
@@ -50,7 +50,7 @@ const Projects = () => {
                     </Link>
                   </div>
                 </div>
-                <img src={nexon_pj} alt="Nexon" />
+                <img src="/img/nexon_pj.svg" alt="Nexon" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -73,7 +73,7 @@ const Projects = () => {
                     </Link>
                   </div>
                 </div>
-                <img src={samsung_pj} alt="Samsung_Display" />
+                <img src="/img/samsung_pj.svg" alt="Samsung_Display" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -101,7 +101,10 @@ const Projects = () => {
                     </Link>
                   </div>
                 </div>
-                <img src={keepcoding_LMS_pj} alt="keepcoding_admin_page" />
+                <img
+                  src="/img/keepcoding_LMS_pj.svg"
+                  alt="keepcoding_admin_page"
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -129,7 +132,7 @@ const Projects = () => {
                     </Link>
                   </div>
                 </div>
-                <img src={keepcoding_pj} alt="Keepcoding_user_page" />
+                <img src="/img/keepcoding_pj.svg" alt="Keepcoding_user_page" />
               </div>
             </SwiperSlide>
           </Swiper>
