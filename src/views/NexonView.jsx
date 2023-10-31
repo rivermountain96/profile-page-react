@@ -44,7 +44,7 @@ const NexonView = () => {
                   링크를 통해 보실 수 있습니다.
                 </p>
                 <p>
-                  담당페이지 :{" "}
+                  담당페이지 : &nbsp;
                   <a
                     href="https://hazel305.github.io/nexon-renewal-webpage/"
                     target="_blank"

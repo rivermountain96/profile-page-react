@@ -47,7 +47,7 @@ const Samsung = () => {
                   홈페이지는 아래 링크를 통해 보실 수 있습니다.
                 </p>
                 <p>
-                  담당페이지 :
+                  담당페이지 : &nbsp;
                   <a
                     href="https://rivermountain96.github.io/last_child/"
                     target="_blank"

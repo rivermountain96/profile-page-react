@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.3f91c539.css",
-    "main.js": "./static/js/main.8b179936.js",
+    "main.js": "./static/js/main.58698417.js",
     "static/media/info_4.jpg": "./static/media/info_4.efca6093647893f3c2b6.jpg",
     "static/media/nexon_pj.svg": "./static/media/nexon_pj.8952222faea599fbd9d037deec4548ca.svg",
     "static/media/project_2_info.png": "./static/media/project_2_info.4b91876a3c2bf7009916.png",
@@ -33,10 +33,10 @@
     "static/media/figma.svg": "./static/media/figma.6428bce9de698246b766f342d460c723.svg",
     "index.html": "./index.html",
     "main.3f91c539.css.map": "./static/css/main.3f91c539.css.map",
-    "main.8b179936.js.map": "./static/js/main.8b179936.js.map"
+    "main.58698417.js.map": "./static/js/main.58698417.js.map"
   },
   "entrypoints": [
     "static/css/main.3f91c539.css",
-    "static/js/main.8b179936.js"
+    "static/js/main.58698417.js"
   ]
 }

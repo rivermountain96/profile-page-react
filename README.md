@@ -20,4 +20,4 @@
 
 - react를 설치합니다. `npx create-react-app 타이틀`
 - react-router-dom을 설치합니다. `npm install react-router-dom`
-- sass를 설치합니다. `npm install sass`
+- scss를 설치합니다. `npm install scss`

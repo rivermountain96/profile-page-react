@@ -48,7 +48,7 @@ const KeepUser = () => {
                   링크를 통해 보실 수 있습니다
                 </p>
                 <p>
-                  담당페이지 :
+                  담당페이지 : &nbsp;
                   <a
                     href="http://keepcoding.dothome.co.kr/keepcoding/main/index.php"
                     target="_blank"
