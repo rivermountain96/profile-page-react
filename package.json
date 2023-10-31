@@ -15,7 +15,6 @@
     "react-scripts": "5.0.1",
     "sass": "^1.69.4",
     "swiper": "^10.3.1",
-    "waypoints": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +45,5 @@
   "devDependencies": {
     "gh-pages": "^6.0.0"
   },
-  "homepage": "https://rivermountain96.github.io/profile-page-react/"
+  "homepage": "."
 }
